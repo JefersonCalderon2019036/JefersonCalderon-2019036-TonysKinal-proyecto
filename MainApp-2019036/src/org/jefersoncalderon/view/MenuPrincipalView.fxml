@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefersoncalderon.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="607.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/FondoMenuPrincipal.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="341.0" fitWidth="264.0" layoutX="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../video/Video1.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="286.0" layoutX="34.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Bienvenida.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="165.0" fitWidth="176.0" layoutX="103.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/LogoKinal.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="14.0" layoutY="33.0" prefHeight="25.0" prefWidth="392.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Salir" />
+          <Menu mnemonicParsing="false" text="Monto">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#TipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#Empresa" text="Empresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#TipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#Productos" text="Productos" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Monto Combinado">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Servicios" text="Servicios" />
+                  <MenuItem mnemonicParsing="false" onAction="#Empleados" text="Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#Presupuesto" text="Presupuesto" />
+                  <MenuItem mnemonicParsing="false" onAction="#Platos" text="Platos" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Montos Dobles">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Productos_Has_Platos" text="Productos has Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#Servicios_Has_Platos" text="Servicios has Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#Servicios_Has_Empleados" text="Servicios has Empleados" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

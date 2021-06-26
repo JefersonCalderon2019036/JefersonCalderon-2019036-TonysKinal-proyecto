@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefersoncalderon.controller.ProductosHasPlatosController">
+   <children>
+      <ImageView fitHeight="386.0" fitWidth="660.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/FondoEmpleado1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="510.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../video/video3.gif" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblProductoshasPlatos" layoutX="23.0" layoutY="127.0" onMouseClicked="#SeleccionarElemento" onSort="#CargarDatos" prefHeight="190.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="colProducto" prefWidth="191.0" text="Productos" />
+          <TableColumn fx:id="colPlatos" prefWidth="206.0" text="Platos" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="93.0" fitWidth="234.0" layoutX="425.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Bienvenida9.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="81.0" layoutX="23.0" layoutY="321.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/BotonInicio.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="458.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#Nuevo" prefHeight="25.0" prefWidth="181.0" text="Nuevo" />
+      <Button fx:id="btnReporte" layoutX="458.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#Reporte" prefHeight="25.0" prefWidth="181.0" text="Reporte" />
+      <ComboBox fx:id="cmbProducto" layoutX="39.0" layoutY="75.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbPlato" layoutX="223.0" layoutY="75.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="40.0" prefHeight="27.0" prefWidth="181.0" text="Código Producto" textFill="#0400ff">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="40.0" prefHeight="27.0" prefWidth="181.0" text="Código Plato" textFill="#e50211">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

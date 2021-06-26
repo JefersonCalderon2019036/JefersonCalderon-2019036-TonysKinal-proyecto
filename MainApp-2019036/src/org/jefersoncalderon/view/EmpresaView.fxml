@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jefersoncalderon.controller.EmpresaController">
+   <children>
+      <ImageView fitHeight="589.0" fitWidth="551.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/FondoEmpresas.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="156.0" fitWidth="177.0" layoutX="354.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/LogoKinal.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableEmpresa" layoutX="22.0" layoutY="241.0" onMouseClicked="#SeleccionarElementos" onSort="#CargarDatos" prefHeight="252.0" prefWidth="510.0">
+        <columns>
+            <TableColumn fx:id="ColCodigo" prefWidth="79.0" text="Código" />
+          <TableColumn fx:id="ColNombre" prefWidth="126.0" text="Nombre" />
+            <TableColumn fx:id="ColDireccion" prefWidth="199.0" text="Dirección" />
+          <TableColumn fx:id="ColTelefono" prefWidth="105.0" text="Telefono" />
+        </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="81.0" prefHeight="18.0" prefWidth="61.0" text="Nombre" textFill="#f2e9e9">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="102.0" layoutY="80.0" prefHeight="25.0" prefWidth="206.0" promptText="Ingrese el nombre de la empresa" />
+      <TextField fx:id="txtTelefono" layoutX="102.0" layoutY="118.0" prefHeight="25.0" prefWidth="206.0" promptText="Ingrese el número de telefono" />
+      <TextField fx:id="txtDireccion" layoutX="102.0" layoutY="152.0" prefHeight="25.0" prefWidth="206.0" promptText="Ingrese la dirección" />
+      <Label layoutX="21.0" layoutY="120.0" prefHeight="22.0" prefWidth="75.0" text="Telefono" textFill="#f2e9e9">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="153.0" prefHeight="22.0" prefWidth="75.0" text="Dirección" textFill="#f2e9e9">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" layoutX="407.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#Eliminar" prefHeight="25.0" prefWidth="103.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="295.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#Reporte" prefHeight="25.0" prefWidth="103.0" text="Reportar" />
+      <Button fx:id="btnEditar" layoutX="182.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#Editar" prefHeight="25.0" prefWidth="103.0" text="Editar" />
+      <Button fx:id="btnNuevo" layoutX="59.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#Nuevo" prefHeight="25.0" prefWidth="103.0" text="Nuevo" />
+      <ImageView fitHeight="86.0" fitWidth="143.0" layoutX="25.0" layoutY="506.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/BotonInicio.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCodigo" layoutX="102.0" layoutY="42.0" prefHeight="25.0" prefWidth="206.0" promptText="Ingrese el código de la empresa" />
+      <Label layoutX="21.0" layoutY="44.0" prefHeight="18.0" prefWidth="61.0" text="Código" textFill="#f2e9e9">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="78.0" fitWidth="143.0" layoutX="419.0" layoutY="498.0" onMouseClicked="#Servicios" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/BotonEmpleados.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

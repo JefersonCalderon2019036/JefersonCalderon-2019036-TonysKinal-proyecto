@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportEmpresa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4adf795-ddc5-49db-a4a7-60af0183d25a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="99"/>
+	<queryString>
+		<![CDATA[call sp_MostrarListaEmpresa()]]>
+	</queryString>
+	<field name="CodigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DireccionEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="193" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="247" height="192" uuid="13c22bdc-e379-412f-8135-1223891b34eb"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\Lineas1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="247" y="-2" width="246" height="194" uuid="b1a7c424-00ae-4ee0-a320-3b694795bcb9"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\Lineas1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="389" y="0" width="166" height="156" uuid="234e2029-6a84-461b-b005-9d337e66067c"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\LogoKinal.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="371" y="173" width="184" height="20" uuid="08de7afa-9f4e-4362-85e9-845d63cd8926"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="14" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tonys Kinal 2019036]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="506d4c34-b1a6-476b-bba0-09849212fb7e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="16" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de empresas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="26" forecolor="#009999" backcolor="#00CCCC" uuid="f6e5524d-fdf2-4dc2-8c67-9e555baa4b0b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="2" width="111" height="26" uuid="68e0d0dc-42f9-4cec-a6df-53e427dec3a4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[CodigoEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="0" width="100" height="28" uuid="442463ad-795a-4173-a58f-e6adb85032c0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[NombreEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="0" width="126" height="28" uuid="529376dd-8064-4c33-a982-3153589da6b3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[DireccionEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="2" width="99" height="26" uuid="0008f755-6070-4acb-a738-42eaa35e739c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="ed2ea7d4-c388-4d91-853a-a02f8e32e603"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CodigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="0" width="100" height="20" uuid="cf37a085-75d6-49f5-b69b-09c55a6eedf5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="0" width="116" height="20" uuid="2c3d88b6-7fc0-45e9-b731-52a3210dc694"/>
+				<textFieldExpression><![CDATA[$F{DireccionEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="b8940b0a-787f-483b-b3d2-f6ac719dd25f"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="178" splitType="Stretch">
+			<image>
+				<reportElement x="308" y="0" width="247" height="178" uuid="f89dd08d-ad42-45b4-a7c7-fdce09a78c06"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\Lineas1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="80" y="0" width="247" height="178" uuid="f66fe364-ab36-4f23-bc4c-1ea32145c45f"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\Lineas1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="156" width="184" height="20" uuid="e2625ed5-2a1a-4ebf-bca6-2780a55f398a"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="14" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tonys Kinal 2019036]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="166" height="156" uuid="db118ae8-9e05-40c5-a8d4-166893683860"/>
+				<imageExpression><![CDATA["C:\\Users\\jefer\\OneDrive - Fundación Kinal -Alumnos-\\Mi Proyecto\\MainApp-2019036\\src\\org\\jefersoncalderon\\imagen\\LogoKinal.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>
